@@ -1,0 +1,149 @@
+/** to remove the default style of the browser*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #ff53ff, #d4534d);
+    color: antiquewhite;
+    font-family: 'Oswald', sans-serif;
+    min-height: 100vh;
+}
+
+header,form {
+    min-height: 20vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color:#ff53ff;
+    background: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #ff53ff;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    background: white;
+    color: black;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.complete-btn, .trash-btn {
+    background-color: #d4534d;
+    color: wheat;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background-color: green;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(30deg);
+    opacity: 0;
+}
+
+/*CUSTOM SELECTOR */
+select {
+    /*to remove the custom styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #d4534d;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+  padding: 1rem;
+}
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #d4534d;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+
+.select:hover::after {
+    background: white;
+    color: #d4534d;
+}
+
+.filter-todo {
+    padding: 1rem;
+}
+
+.todo li {
+    flex: 1;
+}
